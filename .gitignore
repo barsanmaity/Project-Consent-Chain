@@ -1,0 +1,34 @@
+# --- Security (CRITICAL: Never upload these) ---
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+private_keys.json
+secrets.json
+
+# --- Huge Dependency Folders (Don't upload these) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+
+# --- Hardhat / Blockchain (Backend) ---
+/contract/artifacts/
+/contract/cache/
+/contract/coverage/
+/contract/coverage.json
+/contract/typechain/
+/contract/typechain-types/
+
+# --- Next.js / React (Frontend) ---
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+/frontend/dist/
+.vercel
