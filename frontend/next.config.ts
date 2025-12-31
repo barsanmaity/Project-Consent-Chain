@@ -1,15 +1,15 @@
 import type { NextConfig } from "next";
 
-const nextConfig = {
-  /* 1. Ignore TypeScript Errors during build */
+const nextConfig: NextConfig = {
+  /* 1. Add this to fix the Turbopack error */
+  turbopack: {},
+
+  /* 2. Ignore TypeScript Errors */
   typescript: {
     ignoreBuildErrors: true,
   },
-  /* 2. Ignore ESLint Errors during build */
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  /* 3. Fix the "thread-stream" and "pino" crashes */
+  
+  /* 3. Keep the Webpack fix */
   webpack: (config: any) => {
     config.externals.push("pino", "thread-stream");
     return config;
